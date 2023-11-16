@@ -19,9 +19,9 @@ function App() {
           <li>
             <Link className="a"  to='Contact'>Контакты</Link>
           </li>
-          <li>История дворца</li>
+          <a href='#' className='a'>История дворца</a>
           <Link className='a' to='Gallery'>Галерея</Link>
-          <li>Планы залов</li>
+          <a href='#' className='a'>Планы залов</a>
         </nav>
       </header>
       </section>

@@ -14,16 +14,12 @@ export const Carousel = ({children}) =>  {
   const handleLeftClick = () => {
     console.log('left');
     setOffset((currentOffset) => {
-      
       const newOffset = currentOffset + Page_width
-
-
       console.log(newOffset);
       return Math.min(newOffset, 0)
     })
   }
   const handleRightClick = () => {
-    console.log('right');
     setOffset((currentOffset) => {
       const newOffset = currentOffset - Page_width
       const maxOffset = - (Page_width * (pages.length - 1)); 
@@ -34,7 +30,7 @@ export const Carousel = ({children}) =>  {
 
   useEffect(()=>{
     setPages(
-      Children.map(children,(child)=>{
+      Children.map(children,(child) =>{
         return cloneElement(child,{
           style:{
             height:'100%', 

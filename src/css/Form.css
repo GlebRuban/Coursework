@@ -7,7 +7,7 @@
 
 .login-box {
   position: absolute;
-  top: 50%;
+  top: 58%;
   left: 50%;
   width: 400px;
   padding: 40px;
@@ -160,10 +160,54 @@
     bottom: 100%;
   }
 }
-
-
 .login-box .user-box input:invalid {
   border-color: rgb(255, 128, 128);
   color: red;
   box-shadow: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  cursor:pointer;
+}
+
+.seat-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  cursor:pointer;
+}
+
+.seat {
+  width: 43px;
+  height: 40px;
+  border-radius: 6px;
+  border: none;
+  background: rgb(25, 25, 25,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: white;
+  position: relative;
+  left: 3%;
+  cursor:pointer;
+}
+
+.seat.selected {
+  background: #05B093; 
+  transition: 0.5s;
+  cursor:pointer;
+}
+
+.selected-info {
+  margin-top: 1rem;
+  cursor:pointer;
+}
+
+p {
+  gap: 15px;
+  display: flex;
 }

@@ -11,7 +11,6 @@ import music from "../images/Music.png"
 import time from "../images/Time.png"
 import age from "../images/age.png"
 import news1 from "../images/news1.png"
-import hall from "../images/hall.jpg"
 import news2 from "../images/news2.png"
 import poster from "../images/calendar.png"  
 import calendar from "../images/heading.png"
@@ -25,11 +24,9 @@ export default function Home (){
       <Carousel>
       <div className="div_img">
         <img  src = {content} className="img"/>
-        <img  src = {content} className="img"/>
-        <img  src = {content} className="img"/>
-        <img  src = {content} className="img"/>
-        <img  src = {content} className="img"/>
-        <img  src = {content} className="img"/>         
+        <img  src = {content} className="img"/> 
+        <img  src = {content} className="img"/> 
+        <img  src = {content} className="img"/>        
       </div>
       </Carousel>
       <div className="thumb_div">

@@ -70,23 +70,23 @@ height: 557px;
 }
 .img{
   position: relative;
-  width: 885px;
+  width: 861px;
 }
 
 .div_img{
   flex: 1 1;
-  width: 885px;
+  width: 861px;
   display: flex;
   position: relative;
 }
 
 .thumb_div{
   position: relative;
-  right: -14.1%;
+  right: -7.1%;
   display: flex;
   gap: 10px;
   flex-direction: column;
-  flex: 1;
+  flex: 1 1;
 }
 
 .thumb_one{
