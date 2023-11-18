@@ -26,7 +26,6 @@ export default function BuyFormTickets() {
         );
       }
     }
-
     return seats;
   };
 
@@ -34,7 +33,8 @@ export default function BuyFormTickets() {
   {/* Form Content */}
   <div className="login-box">
     <h2>Заказ билета</h2>
-    <form>
+    <form className="form_tickets">
+      <div>
       <div className="user-box">
         <input type="text" name="firstname"  pattern="^[A-Za-zА-Яа-яЁё\s]+$"/>
         <label>Имя</label>
@@ -47,13 +47,14 @@ export default function BuyFormTickets() {
         <input type="tel" name="tel" pattern="[+789][0-9]{11}" />
         <label>Телефон</label>
       </div>
+      </div>
       <table className="App">
         <tbody>
         <div className="selected-info">
         {selectedSeat && (
-          <p>
+          <p className="Row">
             Выбрано место: Ряд 
-            <span>
+            <span className="Row_span">
               {selectedSeat.split('-')[0]}
             </span>
             Место
