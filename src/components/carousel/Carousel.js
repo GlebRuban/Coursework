@@ -6,9 +6,7 @@ import '../carousel/carousel.css'
 const Page_width = 861; 
 
 export const Carousel = ({children}) =>  {
-
   const [pages, setPages] = useState([])
-
   const [offset, setOffset] = useState(0)
 
   const handleLeftClick = () => {

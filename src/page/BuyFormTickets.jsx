@@ -29,6 +29,7 @@ export default function BuyFormTickets() {
     }
     return seats;
   };
+
   const [formData, setFormData] = useState({});
   const handleChange = (event) => {
     setFormData({
@@ -55,6 +56,33 @@ export default function BuyFormTickets() {
     URL.revokeObjectURL(url);
   };
 
+  // НЕ РАБОЧИЙ ВАРИАНТ СО СВОИМ API
+
+  // const [formData, setFormData] = useState({});
+  // const handleChange = (event) => {
+  //   setFormData({
+  //     ...formData,
+  //     [event.target.name]: event.target.value,
+  //   });
+  // };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   fetch('/api/save-data', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify(formData),
+  //   })
+  //     .then( response => response.json())
+  //     .then((data) => {
+  //       console.log(data); 
+  //     })
+  //     .catch((error) => {
+  //       console.error('Ошибка:', error);
+  //     });
+  // };
+
   return<>
   {/* Form Content */}
   <div className="login-box">
@@ -74,9 +102,9 @@ export default function BuyFormTickets() {
           <label>Телефон</label>
         </div>
       </div>
-      <table className="App">
+      <table className="App" name='row and place' onChange={handleChange}>
         <tbody>
-        <div className="selected-info" name="row and place" onChange={handleChange}>
+        <div className="selected-info">
         {selectedSeat && (
           <p className="Row">
             Выбрано место: Ряд 

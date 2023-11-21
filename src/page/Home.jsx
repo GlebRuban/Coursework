@@ -1,7 +1,4 @@
-
 import '../css/Home.css'
-
-
 import content from "../images/slider__main-image.png"
 import thumb from "../images/thumb-slider__image1.png"
 import thumb2 from "../images/thumb-slider__image.png"
@@ -17,6 +14,7 @@ import calendar from "../images/heading.png"
 import { Link } from 'react-router-dom';
 import {Carousel} from '../components/carousel/Carousel'; 
 
+
 export default function Home (){
   return <>
     {/* content */}
@@ -26,7 +24,11 @@ export default function Home (){
         <img  src = {content} className="img"/>
         <img  src = {content} className="img"/> 
         <img  src = {content} className="img"/> 
-        <img  src = {content} className="img"/>        
+        <img  src = {content} className="img"/>
+        <img  src = {content} className="img"/>
+        <img  src = {content} className="img"/> 
+        <img  src = {content} className="img"/> 
+        <img  src = {content} className="img"/>       
       </div>
       </Carousel>
       <div className="thumb_div">
