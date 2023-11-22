@@ -24,11 +24,7 @@ export default function Home (){
         <img  src = {content} className="img"/>
         <img  src = {content} className="img"/> 
         <img  src = {content} className="img"/> 
-        <img  src = {content} className="img"/>
-        <img  src = {content} className="img"/>
-        <img  src = {content} className="img"/> 
-        <img  src = {content} className="img"/> 
-        <img  src = {content} className="img"/>       
+        <img  src = {content} className="img"/>     
       </div>
       </Carousel>
       <div className="thumb_div">
