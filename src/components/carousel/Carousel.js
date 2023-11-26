@@ -1,6 +1,4 @@
-
 import '../carousel/carousel.css'
-
 
 export const Carousel = ({children}) =>  {
   return<>
