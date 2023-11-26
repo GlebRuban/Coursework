@@ -192,39 +192,39 @@ export default function Home (){
     </section>
     {/* annonce_section */}
     <section className="annonce_section">
-    <div className="announce_div">
-      <h1>Краткие анонсы</h1>
-      <div className="events_annonce">
-        <img src={heading} alt="heading" />
-      <a href="">Все мероприятия</a>
-      </div>
-    </div>
-    <div className="glav_month_div">
-      <div className="day_div">
-        <div className="month_div">
-          <p className="month_day">30 <span className="month_span">ОКТЯБРЬ</span> </p>
+      <div className="announce_div">
+        <h1>Краткие анонсы</h1>
+        <div className="events_annonce">
+          <img src={heading} alt="heading" />
+        <a href="">Все мероприятия</a>
         </div>
-        <h3 className="name_annonce">"Век имени Синатры"</h3>
       </div>
-      <div className="day_div">
-        <div className="month_div_second">
-          <p className="month_day_second">3 <span className="month_span_second">Октября</span> </p>
+      <div className="glav_month_div">
+        <div className="day_div">
+          <div className="month_div">
+            <p className="month_day">30 <span className="month_span">ОКТЯБРЬ</span> </p>
+          </div>
+          <h3 className="name_annonce">"Век имени Синатры"</h3>
         </div>
-        <h3 className="name_annonce_second">"Идиот по роману Достоевского"</h3>
-      </div>
-      <div className="day_div">
-        <div className="month_div_three">
-          <p className="month_day_three">14 <span className="month_span_three">Декабря</span> </p>
+        <div className="day_div">
+          <div className="month_div_second">
+            <p className="month_day_second">3 <span className="month_span_second">Октября</span> </p>
+          </div>
+          <h3 className="name_annonce_second">"Идиот по роману Достоевского"</h3>
         </div>
-        <h3 className="name_annonce_three">"Новогодний концерт"</h3>
-      </div>
-      <div className="day_div">
-        <div className="month_div_four">
-          <p className="month_day_four">10 <span className="month_span_four">Января</span> </p>
+        <div className="day_div">
+          <div className="month_div_three">
+            <p className="month_day_three">14 <span className="month_span_three">Декабря</span> </p>
+          </div>
+          <h3 className="name_annonce_three">"Новогодний концерт"</h3>
         </div>
-        <h3 className="name_annonce_four">"Век желаний и надежд"</h3>
-      </div>
-    </div> 
+        <div className="day_div">
+          <div className="month_div_four">
+            <p className="month_day_four">10 <span className="month_span_four">Января</span> </p>
+          </div>
+          <h3 className="name_annonce_four">"Век желаний и надежд"</h3>
+        </div>
+      </div> 
     </section>
     {/* footer */}
     <section className="footer_section">

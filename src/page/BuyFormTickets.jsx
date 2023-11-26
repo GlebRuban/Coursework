@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import "../css/Form.css";
 
 import React, { useState } from 'react';
@@ -30,58 +31,30 @@ export default function BuyFormTickets() {
     return seats;
   };
 
-  const [formData, setFormData] = useState({});
-  const handleChange = (event) => {
-    setFormData({
-      ...formData,
-      [event.target.name]: event.target.value,
-    });
-  };
+  const [ id, setId] = useState("");
+  const [ firstname, setFName] = useState("");
+  const [ lastname, setLName] = useState(""); 
+  const [ phone, setPhone] = useState("");
+  const [ row, setRow] = useState(""); 
+  const [ place, setPlace] = useState(""); 
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const jsonString = JSON.stringify(formData);
-    saveJsonToFile(jsonString, 'data.json');
-  };
+    let regobj = {id,firstname,lastname,phone,row,place}
+    console.log(regobj);
+    fetch("http://localhost:3000/User",{
+      method:"POST", 
+      headers:{'content-type':'application/json'}, 
+      body:JSON.stringify(regobj)
+    }).then(res =>{
+      toast.success('Ok')
+    }).catch((err)=> {
+      toast.error('Not ok :' + err)
+    });
+  }
 
-  const saveJsonToFile = (jsonString, filename) => {
-    const blob = new Blob([jsonString], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
 
-    link.href = url;
-    link.download = filename;
-    link.click();
-
-    URL.revokeObjectURL(url);
-  };
-
-  // НЕ РАБОЧИЙ ВАРИАНТ СО СВОИМ API
-
-  // const [formData, setFormData] = useState({});
-  // const handleChange = (event) => {
-  //   setFormData({
-  //     ...formData,
-  //     [event.target.name]: event.target.value,
-  //   });
-  // };
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   fetch('/api/save-data', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify(formData),
-  //   })
-  //     .then( response => response.json())
-  //     .then((data) => {
-  //       console.log(data); 
-  //     })
-  //     .catch((error) => {
-  //       console.error('Ошибка:', error);
-  //     });
-  // };
 
   return<>
   {/* Form Content */}
@@ -89,30 +62,31 @@ export default function BuyFormTickets() {
     <h2>Заказ билета</h2>
     <form className="form_tickets" onSubmit={handleSubmit}>
       <div className="class">
+      <input type="hidden"   value={id} onChange={event => setId(event.target.value)} />
         <div className="user-box">
-          <input type="text" name="firstname"  pattern="^[A-Za-zА-Яа-яЁё\s]+$" onChange={handleChange} />
+          <input type="text" value={firstname} onChange={event => setFName(event.target.value)}   pattern="^[A-Za-zА-Яа-яЁё\s]+$"  />
           <label>Имя</label>
         </div>
         <div className="user-box">
-          <input type="text" name="surname" pattern="^[A-Za-zА-Яа-яЁё\s]+$" onChange={handleChange} />
+          <input type="text"  pattern="^[A-Za-zА-Яа-яЁё\s]+$" value={lastname} onChange={event => setLName(event.target.value)} />
           <label>Фамилия</label>
         </div>
         <div className="user-box">
-          <input type="tel" name="tel" pattern="[+789][0-9]{11}" onChange={handleChange}/>
+          <input type="tel" pattern="[+789][0-9]{11}" value={phone} onChange={event => setPhone(event.target.value)}/>
           <label>Телефон</label>
         </div>
       </div>
-      <table className="App" name='row and place' onChange={handleChange}>
+      <table className="App" >
         <tbody>
-        <div className="selected-info">
+        <div className="selected-info" >
         {selectedSeat && (
           <p className="Row">
             Выбрано место: Ряд 
-            <span className="Row_span" >
+            <span className="Row_span" value={row} onChange={event => setRow(event.target.value)} >
               {selectedSeat.split('-')[0]}
             </span>
             Место
-            <span>
+            <span value={place} onChange={event => setPlace(event.target.value)}>
               {selectedSeat.split('-')[1]}
             </span>
           </p>
