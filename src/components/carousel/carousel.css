@@ -5,7 +5,7 @@
 }
 .sliderConteiner{
   flex: 1 1;
-  max-width: 891px;
+  max-width: 892px;;
   display: flex;
   position: relative;
   left: 4%;
@@ -13,14 +13,14 @@
   height: 500px;
   align-items: center;
 }
-.arrow {
-  cursor: pointer;
-}
 .allItems{
   height: 100%;
   display: flex;
   transition: translate;
   transition-property: transform;
-  transition-duration: 250ms;
+  transition-duration: 300ms;
   transition-timing-function: ease-in-out;
+}
+.arrow {
+  cursor: pointer;
 }

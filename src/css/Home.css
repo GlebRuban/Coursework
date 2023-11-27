@@ -789,14 +789,14 @@ display: flex;
 
 .footer_div{
   background-color: #191919;
-  position: relative;
-  top: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 100px;
-  height: 300px;
+    position: relative;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    height: 330px;
 }
 .logo_footer{
   display: flex;
@@ -810,12 +810,12 @@ display: flex;
 }
 .meropriatia{
   display: flex;
-  flex-direction: column;
-  position: relative;
-  left: -5.7%;
-  gap: 41px;
-  color: white;
-  top: -48px;
+    flex-direction: column;
+    position: relative;
+    left: -5.7%;
+    gap: 41px;
+    color: white;
+    top: -53px;
 }
 .h1_mer{
   position: relative;
@@ -836,11 +836,11 @@ display: flex;
 .contact{
   flex-direction: column;
   display: flex;
-  gap: 30px;
+  gap: 10px;
   position: relative;
   left: -15px;
   color: white;
-  top: -12px;
+  top: -28px;
 }
 .p_contact{
   flex-direction: column;
@@ -864,7 +864,7 @@ display: flex;
 
 .div_line {
   position: relative;
-  top: -34px;
+    top: -60px;
 }
 
 .line_div{
@@ -879,7 +879,7 @@ display: flex;
   position: relative;
   display: flex;
   justify-content: center;
-  top: -13px;
+  top: -42px;
 }
 .link_saite_name{
   display: flex;

@@ -1,4 +1,7 @@
+import './css/Home.css'
+
 import Home from './page/Home';
+
 import {Route,Link,Routes} from 'react-router-dom'
 import Poster from './page/Poster';
 import Contact from './page/Contact';
